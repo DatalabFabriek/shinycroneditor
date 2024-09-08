@@ -54,7 +54,7 @@ HTMLWidgets.widget({
       
     });
 
-  }
+  },
   
   resize: function(el, width, height) {
     // Code to handle resizing, if needed
