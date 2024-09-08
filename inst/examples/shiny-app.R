@@ -2,6 +2,7 @@
 options(shiny.launch.browser = .rs.invokeShinyWindowExternal)
 
 library(shiny)
+library(shinycroneditor)
 
 ui <- fluidPage(
   titlePanel("Cron Expression Input Widget"),

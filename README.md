@@ -39,11 +39,11 @@ shiny::observe({
 })
 ```
 
-Have a look at [inst/examples/shiny-app.R](inst/examples/shiny-app.R) for a
+Have a look at [inst/examples/shiny-app.R](https://github.com/DatalabFabriek/shinycroneditor/inst/examples/shiny-app.R) for a
 working example.
 
 ## License
-See [LICENSE.md](LICENSE.md). Feel free to open a pull request or issue!
+See [LICENSE.md](https://github.com/DatalabFabriek/shinycroneditor/LICENSE.md). Feel free to open a pull request or issue!
 
 ## Want to work for us?
 Do you like Shiny and do you live in the Netherlands? Get in touch via
