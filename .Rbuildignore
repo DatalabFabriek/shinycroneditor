@@ -1,3 +1,10 @@
-^\.Rproj\.user$
+^\.Rproj\.user
 ^LICENSE\.md$
 ^.*\.Rproj$
+^CRAN-SUBMISSION$
+^cran-comments\.md$
+^\.Rhistory$
+^\.gitignore$
+^\.\.Rcheck$
+^\.git$
+^dev/

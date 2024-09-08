@@ -4,6 +4,8 @@ nice way. It implements
 [JossyDevers/cron-expression-input](https://github.com/JossyDevers/cron-expression-input/),
 but then for use as a Shiny input element.
 
+![Screenshot of the Shiny example app with shinycroneditor](dev/img/screenshot-example-app.png)
+
 ## How to use
 In your UI, add:
 ```r

@@ -2,3 +2,5 @@
 .Rbuildignore
 .Rhistory
 *.RProj
+..Rcheck/
+CRAN-SUBMISSION

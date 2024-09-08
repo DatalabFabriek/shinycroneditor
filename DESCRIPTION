@@ -1,9 +1,11 @@
 Package: shinycroneditor
 Title: Shiny Cron Expression Input Widget
 Version: 1.0.0
-Authors@R: 
-    person("Harmen", "van der Veer", , "harmen@datalab.nl", role = c("aut", "cre"))
+Author: Harmen van der Veer <harmen@datalab.nl>
+Maintainer: Harmen van der Veer <harmen@datalab.nl>
 Description: A widget for Shiny apps to handle cron expression input, using the 'cron-expression-input' JavaScript component.
+Imports: htmltools, htmlwidgets
+Suggests: shiny
 License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
