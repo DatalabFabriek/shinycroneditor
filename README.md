@@ -6,7 +6,15 @@ but then for use as a Shiny input element.
 
 ![Screenshot of the Shiny example app with shinycroneditor](dev/img/screenshot-example-app.png)
 
-## How to use
+## Installing
+We've submitted this as a package to CRAN, but that process takes some time. 
+For now, install via devtools::install_github():
+
+```r
+devtools::install_github("DatalabFabriek/shinycroneditor")
+```
+
+## How to use in Shiny
 In your UI, add:
 ```r
 shinycroneditor::cronOutput(
