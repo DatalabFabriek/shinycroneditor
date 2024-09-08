@@ -1,28 +1,49 @@
+# Launch in external browser (handy for testing, not required)
 options(shiny.launch.browser = .rs.invokeShinyWindowExternal)
 
 library(shiny)
 
 ui <- fluidPage(
   titlePanel("Cron Expression Input Widget"),
-  sidebarLayout(
-    sidebarPanel(
-      shinycroneditor::croneditor(inputId = "cron", label = "Kies verversingsinterval", schedule = "0 1 2 3 4", language = "nl-NL")
+  mainPanel(
+    shinycroneditor::cronOutput("cronschedule1", 
+                                label = "Choose your first schedule", 
+                                language = "en-US"),
+    
+    shiny::div(
+      "Your first chosen schedule is: ",
+      verbatimTextOutput("cronExpression1")
     ),
-    mainPanel(
-      verbatimTextOutput("cronExpression")
+    
+    shinycroneditor::cronOutput("cronschedule2", 
+                                label = "Choose your second schedule", 
+                                language = "en-US"),
+    
+    shiny::div(
+      "Your chosen second schedule is: ",
+      verbatimTextOutput("cronExpression2")
     )
   )
 )
 
 server <- function(input, output, session) {
-  output$cronExpression <- renderPrint({
-    input$cron
+
+  output$cronschedule1 <- shinycroneditor::renderCron({
+    shinycroneditor::cron("0 6 * * *")
   })
   
-  # observe({
-  #   invalidateLater(10000, session)
-  #   updateCronInputWidget(session, "cronInput", value = "*/5 * * * *")
-  # })
+  output$cronExpression1 <- renderPrint({
+    input$cronschedule1
+  })
+  
+  output$cronschedule2 <- shinycroneditor::renderCron({
+    shinycroneditor::cron("30 1,3,7 * * *")
+  })
+  
+  output$cronExpression2 <- renderPrint({
+    input$cronschedule2
+  })
+  
 }
 
 shinyApp(ui, server)
