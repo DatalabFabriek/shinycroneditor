@@ -37,7 +37,13 @@ string and have \code{'px'} appended.}
 \item{quoted}{Is \code{expr} a quoted expression (with \code{quote()})? This
 is useful if you want to save an expression in a variable.}
 }
+\value{
+An 'htmlwidgets' object for use in a shiny app, containing a
+placeholder for where the cron input element is rendered.
+
+A 'htmlwidgets' object for use in a 'shiny' app as an input element
+}
 \description{
-Output and render functions for using cron editor within Shiny
-applications and interactive Rmd documents.
+Output and render functions for using cron editor within 'shiny'
+applications and interactive 'rmarkdown' documents.
 }

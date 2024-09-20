@@ -1,7 +1,7 @@
 # Edit cron schedules in a nice way, in R Shiny
 [![R build status](https://github.com/DatalabFabriek/shinycroneditor/workflows/R-CMD-check/badge.svg)](https://github.com/DatalabFabriek/shinycroneditor/actions)
 
-An R Shiny package that creates a htmlwidget for inputting a cron schedule in a 
+An R 'shiny' package that creates a htmlwidget for inputting a cron schedule in a 
 nice way. It implements 
 [JossyDevers/cron-expression-input](https://github.com/JossyDevers/cron-expression-input/),
 but then for use as a Shiny input element.

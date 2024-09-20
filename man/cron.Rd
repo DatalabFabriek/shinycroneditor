@@ -2,7 +2,7 @@
 % Please edit documentation in R/croneditor.R
 \name{cron}
 \alias{cron}
-\title{Cron editor}
+\title{Cron editor, creates a 'htmlwidgets' object, for use in a 'shiny' dashboard}
 \usage{
 cron(schedule, width = NULL, height = NULL, elementId = NULL)
 }
@@ -15,8 +15,11 @@ cron(schedule, width = NULL, height = NULL, elementId = NULL)
 
 \item{elementId}{Optionally specifiy the ID of the element}
 }
+\value{
+Returns a 'htmlwidgets' object that can be used in a 'shiny' app
+}
 \description{
-Cron editor
+Cron editor, creates a 'htmlwidgets' object, for use in a 'shiny' dashboard
 }
 \examples{
 # A simple cron editor in a Shiny app

@@ -1,9 +1,10 @@
-#' Cron editor
+#' Cron editor, creates a 'htmlwidgets' object, for use in a 'shiny' dashboard
 #'
 #' @param schedule Any valid cron schedule, for example "0 6 * * *"
 #' @param width How wide should the editor be? Defaults to NULL, meaning 100%
 #' @param height How high should the editor be? Defaults to NULL, meaning 32px
 #' @param elementId Optionally specifiy the ID of the element
+#' @returns Returns a 'htmlwidgets' object that can be used in a 'shiny' app
 #' @importFrom htmlwidgets createWidget
 #' @examples
 #' # A simple cron editor in a Shiny app
@@ -77,8 +78,8 @@ cron <- function(schedule, width = NULL, height = NULL, elementId = NULL) {
 
 #' Shiny bindings for cron editor
 #'
-#' Output and render functions for using cron editor within Shiny
-#' applications and interactive Rmd documents.
+#' Output and render functions for using cron editor within 'shiny'
+#' applications and interactive 'rmarkdown' documents.
 #'
 #' @param outputId output variable to read from
 #' @param label The label to show, just like in a regular Shiny input element. 
@@ -95,6 +96,8 @@ cron <- function(schedule, width = NULL, height = NULL, elementId = NULL) {
 #'   is useful if you want to save an expression in a variable.
 #'
 #' @name croneditor-shiny
+#' @returns An 'htmlwidgets' object for use in a shiny app, containing a 
+#'   placeholder for where the cron input element is rendered.
 #' @importFrom htmltools div
 #' @export
 cronOutput <- function(outputId, label = NULL, language = "en-US", 
@@ -120,6 +123,8 @@ cronOutput <- function(outputId, label = NULL, language = "en-US",
   
 }
 
+#' Render the cron input element in a 'shiny' dashboard
+#' @returns A 'htmlwidgets' object for use in a 'shiny' app as an input element
 #' @rdname croneditor-shiny
 #' @export
 renderCron <- function(expr, env = parent.frame(), quoted = FALSE) {
