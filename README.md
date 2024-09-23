@@ -9,9 +9,12 @@ but then for use as a Shiny input element.
 ![Screenshot of the Shiny example app with shinycroneditor](dev/img/screenshot-example-app.png)
 
 ## Installing
-We've submitted this as a package to CRAN, but that process takes some time. 
-For now, install via devtools::install_github():
+Install this package using CRAN:
+```
+install.packages("shinycroneditor")
+```
 
+If you prefer, you can also install this package straight from GitHub via devtools::install_github():
 ```r
 devtools::install_github("DatalabFabriek/shinycroneditor")
 ```
